@@ -10,6 +10,7 @@ target 'Firebase V2' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
 
   target 'Firebase V2Tests' do

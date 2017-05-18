@@ -197,9 +197,12 @@
                                     <constraint firstAttribute="height" constant="37" id="PND-fz-xbJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="SignIn">
+                                <state key="normal" title="Resgister">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButton:" destination="kqW-1J-RQc" eventType="touchUpInside" id="AJU-cF-SEg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -221,6 +224,11 @@
                             <constraint firstItem="KHG-op-aCB" firstAttribute="trailing" secondItem="N7y-nM-p84" secondAttribute="trailingMargin" id="xz3-3t-08G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ayK-32-YdT" id="39b-wM-he0"/>
+                        <outlet property="passwordField" destination="KHG-op-aCB" id="vO1-r7-CIJ"/>
+                        <outlet property="username" destination="pdH-Ph-3nX" id="L6L-tj-Elc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9f-PA-3no" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,17 +266,31 @@
                                     <action selector="logoutButton:" destination="xbv-pB-qcN" eventType="touchUpInside" id="OnS-T9-H7e"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbcRadio" translatesAutoresizingMaskIntoConstraints="NO" id="ySU-Po-DBv">
+                                <rect key="frame" x="137" y="199" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ELT-EA-F3J"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ikx-rv-FE9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.43256760551108742" green="0.90196078430000004" blue="0.57038748960844932" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="DHZ-E3-HWA" firstAttribute="centerX" secondItem="4Jh-7c-TXK" secondAttribute="centerX" id="Ar8-Si-YoS"/>
+                            <constraint firstItem="ySU-Po-DBv" firstAttribute="leading" secondItem="4Jh-7c-TXK" secondAttribute="leadingMargin" constant="121" id="Hqa-eo-wCI"/>
                             <constraint firstItem="q7N-r2-Cqt" firstAttribute="leading" secondItem="4Jh-7c-TXK" secondAttribute="leadingMargin" constant="113" id="HuO-z3-r3x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ySU-Po-DBv" secondAttribute="trailing" constant="122" id="O0e-ic-bqZ"/>
+                            <constraint firstItem="ySU-Po-DBv" firstAttribute="top" secondItem="q7N-r2-Cqt" secondAttribute="bottom" constant="49.5" id="RRp-UW-Dh9"/>
                             <constraint firstItem="q7N-r2-Cqt" firstAttribute="top" secondItem="vlW-Sf-5Wu" secondAttribute="bottom" constant="58" id="W32-7B-D3m"/>
                             <constraint firstItem="DHZ-E3-HWA" firstAttribute="centerY" secondItem="4Jh-7c-TXK" secondAttribute="centerY" id="ecz-lp-UGC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q7N-r2-Cqt" secondAttribute="trailing" constant="113" id="jbR-2Q-LHK"/>
+                            <constraint firstItem="DHZ-E3-HWA" firstAttribute="top" secondItem="ySU-Po-DBv" secondAttribute="bottom" constant="19.5" id="kbw-SR-m3F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bTw-0V-hL3"/>
+                    <connections>
+                        <outlet property="usernameLabel" destination="q7N-r2-Cqt" id="kYp-p7-0pW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfS-HN-nza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,4 +315,7 @@
             <point key="canvasLocation" x="1649" y="-573"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bbcRadio" width="1920" height="1080"/>
+    </resources>
 </document>
